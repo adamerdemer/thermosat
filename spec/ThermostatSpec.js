@@ -13,4 +13,9 @@ describe('Thermostat', function(){
     thermostat.UpTemp();
     expect(thermostat.temperature).toEqual(21);
   });
+
+  it('can decrease the temperature with a down function', function() {
+    thermostat.DownTemp();
+    expect(thermostat.temperature).toEqual(19);
+  });
 });
