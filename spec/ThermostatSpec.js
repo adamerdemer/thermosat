@@ -18,4 +18,8 @@ describe('Thermostat', function(){
     thermostat.DownTemp();
     expect(thermostat.temperature).toEqual(19);
   });
+
+  it("thermostat's minimum temperature is 10 degrees", function(){
+    expect(thermostat.MinTemp).toEqual(10);
+  });
 });
