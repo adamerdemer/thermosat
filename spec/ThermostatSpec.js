@@ -33,4 +33,9 @@ describe('Thermostat', function(){
       expect(thermostat.MaxTemp).toEqual(32);
     });
   });
+
+  it('Reset function resets the temperature to the default temperature of 20 degrees', function() {
+    thermostat.Reset();
+    expect(thermostat.temperature).toEqual(20);
+  });
 });
