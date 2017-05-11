@@ -27,3 +27,8 @@ Thermostat.prototype.PowerSaving = function () {
 Thermostat.prototype.Reset = function () {
   this.temperature = this.DefaultTemp;
 };
+
+Thermostat.prototype.Usage = function () {
+  return "low-usage";
+
+};

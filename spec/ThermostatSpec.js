@@ -38,4 +38,15 @@ describe('Thermostat', function(){
     thermostat.Reset();
     expect(thermostat.temperature).toEqual(20);
   });
+
+  describe('Energy usage', function(){
+    it('gives low usage when the temperature is below 18 degrees', function(){
+      for (i = 0; i < 3; i++) {
+        thermostat.DownTemp();
+      }
+      expect(thermostat.Usage()).toBe("low-usage");
+
+    });
+
+  });
 });
