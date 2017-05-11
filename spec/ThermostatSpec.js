@@ -45,7 +45,10 @@ describe('Thermostat', function(){
         thermostat.DownTemp();
       }
       expect(thermostat.Usage()).toBe("low-usage");
+    });
 
+    it('gives medium-usage when the temperature is between 18-25 degrees', function() {
+      expect(thermostat.Usage()).toBe('medium-usage');
     });
 
   });
