@@ -27,5 +27,10 @@ describe('Thermostat', function(){
     it('if true the maximum temperature is set to 25 degrees', function() {
       expect(thermostat.MaxTemp).toEqual(25);
     });
+
+    it('if false the maximum temperature is set to 32 degrees', function(){
+      thermostat.PowerSaving();
+      expect(thermostat.MaxTemp).toEqual(32);
+    });
   });
 });
