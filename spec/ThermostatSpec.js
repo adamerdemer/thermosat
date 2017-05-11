@@ -22,4 +22,10 @@ describe('Thermostat', function(){
   it("thermostat's minimum temperature is 10 degrees", function(){
     expect(thermostat.MinTemp).toEqual(10);
   });
+
+  describe('PowerSavingOn', function() {
+    it('if true the maximum temperature is set to 25 degrees', function() {
+      expect(thermostat.MaxTemp).toEqual(25);
+    });
+  });
 });
